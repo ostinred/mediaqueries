@@ -1,0 +1,134 @@
+@import "bootstrap variables";
+
+//Mobile first
+//**All media-queries -> min-width
+
+// min-width extra small screen / phone
+
+@mixin xs{
+  @media screen and (min-width: #{$screen-xs}){
+    @content;
+  }
+}
+
+
+// min-width small screen / tablets
+@mixin sm{
+  @media screen and (min-width: #{$screen-sm}){
+    @content;
+  }
+}
+
+// min-width medium screen / desktop
+@mixin md{
+  @media screen and (min-width: #{$screen-md}){
+    @content;
+  }
+}
+
+// min-width large screen / wide desktop
+@mixin lg{
+  @media screen and (min-width: #{$screen-lg}){
+    @content;
+  }
+}
+
+//Mobile first invert
+//**All media-queries -> max-width
+
+// max-width extra small screen / phone
+@mixin max-xs{
+  @media screen and (max-width: #{$screen-xs}){
+    @content;
+  }
+}
+
+// max-width small screen / tablets
+@mixin max-sm{
+  @media screen and (max-width: #{$screen-sm}){
+    @content;
+  }
+}
+
+// max-width medium screen / desktop
+@mixin max-md{
+  @media screen and (max-width: #{$screen-md}){
+    @content;
+  }
+}
+
+// max-width large screen / wide desktop
+@mixin max-lg{
+  @media screen and (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+
+//In-between media-queries
+//**All media-rules -> min-width - max-width
+// in order
+@mixin xs-sm{
+  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-sm}){
+    @content;
+  }
+}
+
+@mixin sm-md{
+  @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md}){
+    @content;
+  }
+}
+
+
+@mixin md-lg{
+  @media (min-width: #{$screen-md}) and (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+
+
+//variantly
+@mixin xs-md{
+  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-md}){
+    @content;
+  }
+}
+
+@mixin xs-lg{
+  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+
+@mixin sm-lg{
+  @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+
+@mixin lg-xlg{
+  @media (min-width: #{$screen-lg}) and (max-width: 1400px){
+    @content;
+  }
+}
+
+//sm -1px
+@mixin max-sm-pre{
+  @media screen and (max-width: #{$screen-sm-max}){
+    @content;
+  }
+}
+
+//md -1px
+@mixin max-md-pre{
+  @media screen and (max-width: #{$screen-md-max}){
+    @content;
+  }
+}
+
+//lg -1px
+@mixin max-lg-pre{
+  @media screen and (max-width: #{$screen-lg-max}){
+    @content;
+  }
+}

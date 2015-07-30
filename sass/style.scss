@@ -1,0 +1,29 @@
+@import "mediaqueries";
+
+header{
+  color: #000;
+
+  @include xs{
+    color: #101;
+  }
+
+  @include lg{
+    color: #eee;
+  }
+
+  @include max-sm{
+    color: darkgreen;
+  }
+
+  @include xs-sm{
+    color: burlywood;
+  }
+
+  @include xs-lg{
+    color: #fff;
+  }
+
+  @include max-sm-pre{
+    color: darkgray;
+  }
+}

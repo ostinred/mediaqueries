@@ -1,0 +1,41 @@
+header {
+    color: #000;
+}
+
+@media screen and (min-width: 480px) {
+    header {
+        color: #101;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    header {
+        color: #eee;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        color: darkgreen;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    header {
+        color: burlywood;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1170px) {
+    header {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        color: darkgray;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
