@@ -12,6 +12,7 @@
     "mixins for bootsrap 3"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/ostinred/mediaqueries#README",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": ">= 0.1.13",
