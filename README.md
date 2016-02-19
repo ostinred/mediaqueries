@@ -5,7 +5,7 @@ Mobile first oriented
 ## Bower install
 
 ```
-$ bower install mediarules-bootstrap
+$ bower install media-bootstrap-sass
 ```
 
 ### What it is
