@@ -1,34 +1,61 @@
-@import "bootstrap variables";
+// variables
+$xs:            320px !default;
+$xs-landscape:  480px !default;
+$sm:            767px !default;
+$md:            992px !default;
+$lg:            1170px !default;
+$xlg:           1600px !default;
+
+$xs-max:        $xs - 1 !default;
+$xs-landscape:  $xs - 1 !default;
+$sm-max:        $sm - 1 !default;
+$md-max:        $md - 1 !default;
+$lg-max:        $lg - 1 !default;
+$xlg-max:       $xlg - 1 !default;
 
 //Mobile first
 //**All media-queries -> min-width
 
-// min-width extra small screen / phone
+// min-width extra small screen / phone portrait
 
-@mixin xs{
-  @media screen and (min-width: #{$screen-xs}){
+@mixin xs {
+  @media screen and (min-width: #{$xs}) {
     @content;
   }
 }
 
+// min-width extra small screen / phone landscape
+
+@mixin xs-landcape {
+  @media screen and (min-width: #{$xs-landscape}) {
+    @content;
+  }
+}
 
 // min-width small screen / tablets
-@mixin sm{
-  @media screen and (min-width: #{$screen-sm}){
+@mixin sm {
+  @media screen and (min-width: #{$sm}) {
     @content;
   }
 }
 
 // min-width medium screen / desktop
-@mixin md{
-  @media screen and (min-width: #{$screen-md}){
+@mixin md {
+  @media screen and (min-width: #{$md}) {
     @content;
   }
 }
 
 // min-width large screen / wide desktop
-@mixin lg{
-  @media screen and (min-width: #{$screen-lg}){
+@mixin lg {
+  @media screen and (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+// min-width xlarge screen
+@mixin xlg {
+  @media screen and (min-width: #{$xlg}) {
     @content;
   }
 }
@@ -36,30 +63,44 @@
 //Mobile first invert
 //**All media-queries -> max-width
 
-// max-width extra small screen / phone
-@mixin max-xs{
-  @media screen and (max-width: #{$screen-xs}){
+// max-width extra small screen / phone portrait
+@mixin max-xs {
+  @media screen and (max-width: #{$xs}) {
+    @content;
+  }
+}
+
+// max-width extra small screen / phone landscape
+@mixin max-xs-landscape {
+  @media screen and (max-width: #{$xs-landscape}) {
     @content;
   }
 }
 
 // max-width small screen / tablets
-@mixin max-sm{
-  @media screen and (max-width: #{$screen-sm}){
+@mixin max-sm {
+  @media screen and (max-width: #{$sm}) {
     @content;
   }
 }
 
 // max-width medium screen / desktop
-@mixin max-md{
-  @media screen and (max-width: #{$screen-md}){
+@mixin max-md {
+  @media screen and (max-width: #{$md}) {
     @content;
   }
 }
 
 // max-width large screen / wide desktop
-@mixin max-lg{
-  @media screen and (max-width: #{$screen-lg}){
+@mixin max-lg {
+  @media screen and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+// max-width xlarge screen
+@mixin max-lg {
+  @media screen and (max-width: #{$xlg}) {
     @content;
   }
 }
@@ -67,68 +108,168 @@
 //In-between media-queries
 //**All media-rules -> min-width - max-width
 // in order
-@mixin xs-sm{
-  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-sm}){
+@mixin xs-sm {
+  @media (min-width: #{$xs}) and (max-width: #{$sm}) {
     @content;
   }
 }
 
-@mixin sm-md{
-  @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md}){
+@mixin xs-xs-landscape {
+  @media (min-width: #{$xs}) and (max-width: #{$xs-landscape}) {
     @content;
   }
 }
 
-
-@mixin md-lg{
-  @media (min-width: #{$screen-md}) and (max-width: #{$screen-lg}){
+@mixin xs-md {
+  @media (min-width: #{$xs}) and (max-width: #{$md}) {
     @content;
   }
 }
 
-
-//variantly
-@mixin xs-md{
-  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-md}){
+@mixin xs-lg {
+  @media (min-width: #{$xs}) and (max-width: #{$lg}) {
     @content;
   }
 }
 
-@mixin xs-lg{
-  @media (min-width: #{$screen-xs}) and (max-width: #{$screen-lg}){
+@mixin xs-xlg {
+  @media (min-width: #{$xs}) and (max-width: #{$xlg}) {
     @content;
   }
 }
 
-@mixin sm-lg{
-  @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg}){
+//*
+@mixin xs-landscape-sm {
+  @media (min-width: #{$xs-landscape}) and (max-width: #{$sm}) {
     @content;
   }
 }
 
-@mixin lg-xlg{
-  @media (min-width: #{$screen-lg}) and (max-width: 1400px){
+@mixin xs-landscape-md {
+  @media (min-width: #{$xs-landscape}) and (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin xs-landscape-lg {
+  @media (min-width: #{$xs-landscape}) and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xs-landscape-xlg {
+  @media (min-width: #{$xs-landscape}) and (max-width: #{$xlg}) {
+    @content;
+  }
+}
+
+//*
+
+@mixin sm-md {
+  @media (min-width: #{$sm}) and (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin sm-lg {
+  @media (min-width: #{$sm}) and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin sm-xlg {
+  @media (min-width: #{$sm}) and (max-width: #{$xlg}) {
+    @content;
+  }
+}
+
+@mixin md-lg {
+  @media (min-width: #{$md}) and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin md-xlg {
+  @media (min-width: #{$md}) and (max-width: #{$xlg}) {
     @content;
   }
 }
 
 //sm -1px
-@mixin max-sm-pre{
-  @media screen and (max-width: #{$screen-sm-max}){
+@mixin max-sm-pre {
+  @media screen and (max-width: #{$sm-max}) {
     @content;
   }
 }
 
 //md -1px
-@mixin max-md-pre{
-  @media screen and (max-width: #{$screen-md-max}){
+@mixin max-md-pre {
+  @media screen and (max-width: #{$md-max}) {
     @content;
   }
 }
 
 //lg -1px
-@mixin max-lg-pre{
-  @media screen and (max-width: #{$screen-lg-max}){
+@mixin max-lg-pre {
+  @media screen and (max-width: #{$lg-max}) {
+    @content;
+  }
+}
+
+//xlg -1px
+@mixin max-xlg-pre {
+  @media screen and (max-width: #{$xlg-max}) {
+    @content;
+  }
+}
+
+// Media queries for iphones
+
+// iPhone 3, 4:
+@mixin iphone-4{
+  @media screen and (device-aspect-ratio: 2/3) {
+    @content;
+  }
+}
+
+// iPhone 5:
+@mixin iphone-5{
+  @media screen and (device-aspect-ratio: 40/71) {
+    @content;
+  }
+}
+
+// iPhone 6:
+@mixin iphone-6{
+  @media screen and (device-aspect-ratio: 375/667) {
+    @content;
+  }
+}
+
+// iPhone 6 Plus:
+@mixin iphone-6plus{
+  @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) and (-webkit-device-pixel-ratio : 3) {
+    @content;
+  }
+}
+
+// variantly media query mixin
+@mixin mq($min-width, $max-width){
+  @media screen and (min-width:$min-width) and (max-width:$max-width) {
+    @content;
+  }
+}
+
+// mixin for height min
+@mixin mq-height-min($min-height){
+  @media screen and (min-height: $min-height){
+    @content;
+  }
+}
+
+// mixin for height max
+@mixin mq-height-max($max-height){
+  @media screen and (max-height: $max-height){
     @content;
   }
 }
