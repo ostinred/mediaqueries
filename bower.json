@@ -1,0 +1,22 @@
+{
+  "name": "mediaqueries",
+  "homepage": "https://github.com/ostinred/mediaqueries",
+  "authors": [
+    "ostinred <ostinred@gmail.com>"
+  ],
+  "description": "SCSS mediaqueries for comfortable and fast CSS coding",
+  "main": "_mediaqueries.scss",
+  "keywords": [
+    "mediaqueries",
+    "SCSS",
+    "SCSS-mixins"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

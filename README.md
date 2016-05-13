@@ -9,7 +9,7 @@ $ bower install mediaqueries
 
 ### How to use
 ```
-$ bower install media-bootstrap-sass
+@import "./your/path/bower_components/mediaqueries/mediaqueries";
 ```
 
 
