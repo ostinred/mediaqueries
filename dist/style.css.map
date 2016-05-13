@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,MAAM;EACJ,KAAK,EAAE,IAAI;ACKX,oCAA4C;EDN9C,MAAM;IAIF,KAAK,EAAE,IAAI;ACwBb,qCAA4C;ED5B9C,MAAM;IAQF,KAAK,EAAE,IAAI;ACqCb,oCAA4C;ED7C9C,MAAM;IAYF,KAAK,EAAE,SAAS;ACwDlB,gDAAgE;EDpElE,MAAM;IAgBF,KAAK,EAAE,SAAS;AC+ElB,iDAAgE;ED/FlE,MAAM;IAoBF,KAAK,EAAE,IAAI;AC8Fb,oCAAgD;EDlHlD,MAAM;IAwBF,KAAK,EAAE,QAAQ",
-"sources": ["../sass/style.scss","../sass/_mediaqueries.scss"],
-"names": [],
-"file": "style.css"
-}
