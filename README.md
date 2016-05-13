@@ -4,7 +4,7 @@
 ### Bower install
 
 ```
-$ bower install media-bootstrap-sass
+$ bower install mediaqueries
 ```
 
 ### How to use
