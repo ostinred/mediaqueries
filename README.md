@@ -1,6 +1,5 @@
 # mediaqueries mixins for SCSS projects 
-Mixins for comforatble using media queries <br>
-Mobile first oriented
+#### Mixins for comforatble using media queries. Mobile first oriented
 
 ### Bower install
 
