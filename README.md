@@ -1,21 +1,18 @@
-# mediaqueries-bootstrap
-Mixins for comforatble using media rules (using Twitter Bootstrap's scss variables)<br>
+# mediaqueries mixins for SCSS projects 
+Mixins for comforatble using media queries <br>
 Mobile first oriented
 
-## Bower install
+### Bower install
 
 ```
 $ bower install media-bootstrap-sass
 ```
 
-### What it is
-
-This is a little kit for comfortable using media rules. It is specifically targeted to Mobile first.<br>
-100% compatible with Twitter Bootstrap 3. 
-
 ### How to use
+```
+$ bower install media-bootstrap-sass
+```
 
-This little kit of mixins is very simple to use. Just copy content of file "_mediaqueries.scss" to your file with mixins or add this to "_mixins.scss" in Twitter Bootstrap source.
 
 #### Mobile first
 
