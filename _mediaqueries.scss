@@ -99,7 +99,7 @@ $xlg-max:       $xlg - 1 !default;
 }
 
 // max-width xlarge screen
-@mixin max-lg {
+@mixin max-xlg {
   @media screen and (max-width: #{$xlg}) {
     @content;
   }
@@ -191,6 +191,13 @@ $xlg-max:       $xlg - 1 !default;
 
 @mixin md-xlg {
   @media (min-width: #{$md}) and (max-width: #{$xlg}) {
+    @content;
+  }
+}
+
+//*
+@mixin lg-xlg {
+  @media (min-width: #{$lg}) and (max-width: #{$xlg}) {
     @content;
   }
 }
