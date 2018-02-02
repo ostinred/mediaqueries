@@ -280,6 +280,8 @@ $xlg-max:       $xlg - 1 !default;
 }
 
 //iPhone X
-@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
-  @content;
+@mixin iphone-x {
+  @media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+    @content;
+  }
 }
