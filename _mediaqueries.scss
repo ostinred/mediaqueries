@@ -288,16 +288,23 @@ $xlg-max:       $xlg - 1 !default;
   }
 }
 
-//iPhone X
+// iPhone X
 @mixin iphone-x {
   @media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
     @content;
   }
 }
 
-//iPad
+// iPad
 @mixin ipad {
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    @content;
+  }
+}
+
+// Retina display
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     @content;
   }
 }
