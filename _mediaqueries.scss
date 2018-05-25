@@ -1,44 +1,23 @@
 // variables
-$xs:            320px !default;
-$xs-landscape:  480px !default;
-$sm:            767px !default;
-$md:            992px !default;
-$lg:            1170px !default;
-$xlg:           1600px !default;
+$mobile:        320px !default;
+$tablet:        767px !default;
+$desktop:       1170px !default;
+$desktop-lg:    1400px !default;
+$desktop-hd:    1900px !default;
+$desktop-2k:    2400px !default;
 
-$xs-max:        $xs - 1 !default;
-$xs-landscape:  $xs - 1 !default;
-$sm-max:        $sm - 1 !default;
-$md-max:        $md - 1 !default;
-$lg-max:        $lg - 1 !default;
-$xlg-max:       $xlg - 1 !default;
-
-//Mobile first
-//**All media-queries -> min-width
-
-// min-width extra small screen / phone portrait
-
-@mixin xs {
-  @media screen and (min-width: #{$xs}) {
-    @content;
-  }
-}
-
-// min-width extra small screen / phone landscape
-
-@mixin xs-landcape {
-  @media screen and (min-width: #{$xs-landscape}) {
+@mixin mobile {
+  @media screen and (min-width: #{#mobile}) {
     @content;
   }
 }
 
 // min-width small screen / tablets
-@mixin sm {
-  @media screen and (min-width: #{$sm}) {
+@mixin tablet {
+  @media screen and (min-width: #{$tablet}) {
     @content;
   }
-}
-
+}$
 // min-width medium screen / desktop
 @mixin md {
   @media screen and (min-width: #{$md}) {
@@ -48,7 +27,7 @@ $xlg-max:       $xlg - 1 !default;
 
 // min-width large screen / wide desktop
 @mixin lg {
-  @media screen and (min-width: #{$lg}) {
+  @media screen and (min-width: #{$desktop}) {
     @content;
   }
 }
@@ -202,55 +181,6 @@ $xlg-max:       $xlg - 1 !default;
   }
 }
 
-//sm -1px
-@mixin max-sm-pre {
-  @media screen and (max-width: #{$sm-max}) {
-    @content;
-  }
-}
-
-//md -1px
-@mixin max-md-pre {
-  @media screen and (max-width: #{$md-max}) {
-    @content;
-  }
-}
-
-//lg -1px
-@mixin max-lg-pre {
-  @media screen and (max-width: #{$lg-max}) {
-    @content;
-  }
-}
-
-//xlg -1px
-@mixin max-xlg-pre {
-  @media screen and (max-width: #{$xlg-max}) {
-    @content;
-  }
-}
-
-// variantly media query mixin
-@mixin mq($min-width, $max-width){
-  @media screen and (min-width:$min-width) and (max-width:$max-width) {
-    @content;
-  }
-}
-
-// mixin for height min
-@mixin mq-height-min($min-height){
-  @media screen and (min-height: $min-height){
-    @content;
-  }
-}
-
-// mixin for height max
-@mixin mq-height-max($max-height){
-  @media screen and (max-height: $max-height){
-    @content;
-  }
-}
-
 
 // landscape
 @mixin landscape {
@@ -260,7 +190,6 @@ $xlg-max:       $xlg - 1 !default;
 }
 
 
-// Media queries for iPhones
 // iphone 3, 3gs, 4, 4s
 @mixin iphone-xs{
   @media screen and (device-aspect-ratio: 2/3) {
